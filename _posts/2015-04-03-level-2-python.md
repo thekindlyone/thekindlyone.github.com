@@ -39,7 +39,7 @@ This is a way to construct lists on the fly.
 Say you want to make a list that contains the squares of first 10 natural numbers
 
 ###What you know:  
-
+{% highlight python %}
     In [1]: squares=[]
 
     In [2]: for number in range(1,11):
@@ -48,24 +48,24 @@ Say you want to make a list that contains the squares of first 10 natural number
 
     In [3]: squares
     Out[3]: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-
+{% endhighlight %}
 ###List comprehension way     
-
+{% highlight python %}
     In [4]: squares=[number*number for number in range(1,11)]
 
     In [5]: squares
     Out[5]: [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-
+{% endhighlight %}
 It takes an if statement too!    
-
+{% highlight python %}
     In [6]: squares_of_even=[num* num for num in range(1,11) if not num%2]
 
     In [7]: squares_of_even
     Out[7]: [4, 16, 36, 64, 100]
-
+{% endhighlight %}
 You can construct a list of anything with this.    
 list of tuples of numbers and their squares for first 10 natural numbers:
-
+{% highlight python %}
     In [8]: tuples=[(num,num*num)for num in range(1,11)]
 
     In [9]: tuples
@@ -80,7 +80,7 @@ list of tuples of numbers and their squares for first 10 natural numbers:
      (8, 64),
      (9, 81),
      (10, 100)]
-
+{% endhighlight %}
 ###Anatomy of list comprehensions, and optional bling
 ![listcomp.png](http://i.imgur.com/DhooQ7E.png)
 
@@ -88,7 +88,7 @@ list of tuples of numbers and their squares for first 10 natural numbers:
 **Dictionary Comprehension** : ```{<key>:<value> for <item> in <iterable> }```     
 This lets you construct dictionaries.
 For example, to find how many times each character in a string repeats, one can do this:
-
+{% highlight python %}
     In [2]: s='This is a string with many letters repeating.'
 
     In [3]: freq_table={letter:s.count(letter) for letter in s }
@@ -112,31 +112,31 @@ For example, to find how many times each character in a string repeats, one can 
      't': 5,
      'w': 1,
      'y': 1}
-
+{% endhighlight %}
 **Set comprehensions**: ```{<member> for <item> in <iterable>}```     
 This lets you create a set. A set is a data structure that do not allow repeats(only unique values) and are optimized for fast membership tests(which of the elements of SET A are also members of SET B?) and other related computations.     
 Say, if we have a list of strings ```['parrot','dead','argument','spam','eggs','spam']``` and we need to find out the unique lengths. ie there are strings of length 8,4 and 6 in the list and no other length strings.
-
+{% highlight python %}
     In [6]: l=['parrot','dead','argument','spam','eggs','spam']
 
     In [7]: {len(word) for word in l}
     Out[7]: set([8, 4, 6])
-
+{% endhighlight %}
 **Generator expressions**: ```(<item to yield> for <item> in <iterable>)```      
 A generator expression is a lazy list comprehension. What this means is that the entire list is not stored in memory and when you iterate through it, the values are calculated just when they are needed. the difference between list comprehensions and generator expressions is also the difference between ```range()``` and ```xrange()``` from the standard library. A lot of the times, you do not need every item in a list at the same time, and using generator expressions at these times can save quite a bit of memory. For example , if you need the sum of the squares of the first 100 natural numbers, you do not need to store all the squares at any point. You only need an accumulator variable to store the total and the current square in the iteration.
-
+{% highlight python %}
     In [15]: generator=(num*num for num in xrange(100))
 
     In [16]: sum(generator)
     Out[16]: 328350
-
+{% endhighlight %}
 Note that ```sum()``` does not convert the argument into a list and works lazily.
 
 ###splat(```*```) and double splat(```**```)     
 **splat**:     
 While passing arguments in a function call, the splat ```*``` operator is a signal to unpack.
 Say you have a function that needs 3 arguments ```def foo(arg1,arg2,arg3)```, but while calling it, you have the arguments to send in a list, you can do the following   
-
+{% highlight python %}
     In [33]: def foo(arg1,arg2,arg3): # accepts 3 arguments and return them as a tuple
        ....:     return arg1,arg2,arg3
        ....:
@@ -145,30 +145,30 @@ Say you have a function that needs 3 arguments ```def foo(arg1,arg2,arg3)```, bu
 
     In [35]: foo(*args) # send a single list as argument with a splat, which is a signal to unpack
     Out[35]: (12, 'a string', 23.7) 
-
+{% endhighlight %}
 It works the other way around too, and allows you to send an arbitary number of arguments to a function.
-
+{% highlight python %}
     In [36]: def foo(*args): #pack all the incoming arguments into a tuple called args
        ....:     return args 
        ....:
 
     In [37]: foo(1,2,3,'a string') # sending multiple arguments
     Out[37]: (1, 2, 3, 'a string') # arguments get returned fine
-
+{% endhighlight %}
 You are encouraged to experiment with this stuff till you get a solid idea.
 
 **double splat**:     
 the double splat(```**```) is similar to the splat, just that it allows keyword arguments. You can arbitrarily pass keyword arguments and the function receives it as a dictionary.
-    
+{% highlight python %}    
     In [39]: def foo(**kwargs):
        ....:     return kwargs
        ....:
 
     In [40]: foo(name='aritra',lastname='das')
     Out[40]: {'lastname': 'das', 'name': 'aritra'}
-
+{% endhighlight %}
 other way round:
-
+{% highlight python %}
     In [44]: def foo(name,lastname):
        ....:     return name,lastname
        ....:
@@ -177,7 +177,7 @@ other way round:
 
     In [46]: foo(**args) #send a dictionary with unpack signal
     Out[46]: ('aritra', 'das')
-
+{% endhighlight %}
 
 ###[zip](https://docs.python.org/2/library/functions.html#zip)
 Docstring:
@@ -186,59 +186,59 @@ Docstring:
 Return a list of tuples, where each tuple contains the i-th element
 from each of the argument sequences.  The returned list is truncated
 in length to the length of the shortest argument sequence.
-
+{% highlight python %}
     In [48]: zip([1,2,3],['a','b','c'])
     Out[48]: [(1, 'a'), (2, 'b'), (3, 'c')]
-
+{% endhighlight %}
 The opposite operation of this, where you have a list of tuples and you want a tuple of lists where each list 
-    
+{% highlight python %}    
     In [55]: zipped=zip([1,2,3],['a','b','c'])
 
     In [56]: unzipped=zip(*zipped)
 
     In [57]: unzipped
     Out[57]: [(1, 2, 3), ('a', 'b', 'c')]
-
+{% endhighlight %}
 The combination of all this lets you do a lot of cool stuff.
 
 ###lambdas    
 A lambda is simply a function maker which lets you make oneline functions that return one expression. This expression can be conditional expressions or list comprehensions or whatever.
-
+{% highlight python %}
     In [58]: foo=lambda x: sum(xrange(x))
 
     In [59]: foo(10)
     Out[59]: 45
-
+{% endhighlight %}
 Is equivalent to
-
+{% highlight python %}
     In [60]: def foo(x):
        ....:     return sum(xrange(x))
        ....:
 
     In [61]: foo(10)
     Out[61]: 45
-
+{% endhighlight %}
 you can also call it directly without assigning to a variable.
-
+{% highlight python %}
     In [63]: (lambda x: sum(xrange(x)))(10)
     Out[63]: 45
-
+{% endhighlight %}
 
 ###random example
 Suppose you have a bunch of 2D coordinates as a list of tuples ```[(x1,y1),(x2,y2),(x3,y3)....]``` and you want to find out the minimum x, maximum x, minimum y and maximum y.
-
+{% highlight python %}
     In [75]: coords=[(1,3),(2,5),(6,4),(2,9),(0,0)]
 
     In [76]: (maxx,minx),(maxy,miny)=map(lambda p:(max(p),min(p)), zip(*coords))
 
     In [77]: print maxx,minx,maxy,miny
     6 0 9 0
-
+{% endhighlight %}
 ```zip(*coords)``` unzips coords into ```[(x1,x2,x3,x4...),(y1,y2,y3,y4...)]```     
 ```map(<function or lambda>,iterable)``` returns a list of new values by applying the function on each value of the iterable
 ```lambda p:(max(p),min(p))``` takes an iterable and returns a tuple of the maximum and the minimum item in the list    
 Automatic unpacking causes the output of map to be assigned properly to the tuple of tuples in the left hand side.
-
+{% highlight python %}
 
     In [87]: l=[('A1','B1'),('A2','B2')]
 
@@ -246,5 +246,5 @@ Automatic unpacking causes the output of map to be assigned properly to the tupl
 
     In [89]: a1,b1,a2,b2
     Out[89]: ('A1', 'B1', 'A2', 'B2')
-
+{% endhighlight %}
 
