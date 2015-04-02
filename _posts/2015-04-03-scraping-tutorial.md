@@ -32,22 +32,22 @@ is the ```div``` with all the information we need: The title text(mouseovers) an
 Performing *GET* requests using the requests module is terribly easy. Using [the ```get()``` method of the requests module](http://docs.python-requests.org/en/latest/user/quickstart/#make-a-request), you obtain a response object that has the ```status_code``` and the ```content``` attributes that contain the response status and the html content respectively.   
 {% highlight python %}
 
-    In [8]: response=requests.get('http://www.paranatural.net/index.php?id=1')
-    In [9]: response.status_code
-    Out[9]: 200
-    In [10]: response.content
-    Out[10]: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n\n<html xmlns=.....
+In [8]: response=requests.get('http://www.paranatural.net/index.php?id=1')
+In [9]: response.status_code
+Out[9]: 200
+In [10]: response.content
+Out[10]: '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n\n<html xmlns=.....
 {% endhighlight %}
 Given that network operations can be prone to timeouts and other connectivity issues( more so if you have bad internet), we ought to wrap this getting of pages stuff in a function which retries getting pages multiple times before giving up.
 {% highlight python %}
 
-    def get_page(url,max_attempts):
-        for i in xrange(max_attempts):
-            r = requests.get(url)
-            if r.status_code == 200:
-                return r.content
-        print r.status_code
-        return False
+def get_page(url,max_attempts):
+    for i in xrange(max_attempts):
+        r = requests.get(url)
+        if r.status_code == 200:
+            return r.content
+    print r.status_code
+    return False
 {% endhighlight %}
 This function takes a ```url``` and an integer ```max_attempts``` and attempts to get the page ```max_attempts``` times returning immediately with the content in case of success(code 200) 
 
@@ -58,17 +58,17 @@ Okay, cool. But now we need to dig out the ```<div id="comicbody">``` from the c
 But BeautifulSoup simplifies the process vastly, making simple web scraping almost trivial. To work with BeautifulSoup, you first make a soup object using the method ```BeautifulSoup(<html string>)``` . To look for a specific div with known id in the entire document you can use the ```find()``` method. the objects returned by this can access child elements using the ```.``` syntax. To get an attribute of the element, you use the ```get()``` attribute.
 {% highlight python %}
 
-    In [4]: html=get_page('http://www.paranatural.net/index.php?id=1',5)
-    In [5]: soup=BeautifulSoup(html)
-    In [6]: comicdiv=soup.find(id='comicbody')
-    In [7]: comicdiv
-    Out[7]: <div id="comicbody"><a href="/index.php?id=2"><img border="0" id="comic" src="http://www.paranatural.net/comics/2011-04-30-chapter 1.png" title="Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school."/><br/></a></div>
-    In [8]: comicdiv.img
-    Out[8]: <img border="0" id="comic" src="http://www.paranatural.net/comics/2011-04-30-chapter 1.png" title="Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school."/>
-    In [9]: comicdiv.img.get('src')
-    Out[9]: u'http://www.paranatural.net/comics/2011-04-30-chapter 1.png'   
-    In [10]: comicdiv.img.get('title')
-    Out[10]: u'Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school.'
+In [4]: html=get_page('http://www.paranatural.net/index.php?id=1',5)
+In [5]: soup=BeautifulSoup(html)
+In [6]: comicdiv=soup.find(id='comicbody')
+In [7]: comicdiv
+Out[7]: <div id="comicbody"><a href="/index.php?id=2"><img border="0" id="comic" src="http://www.paranatural.net/comics/2011-04-30-chapter 1.png" title="Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school."/><br/></a></div>
+In [8]: comicdiv.img
+Out[8]: <img border="0" id="comic" src="http://www.paranatural.net/comics/2011-04-30-chapter 1.png" title="Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school."/>
+In [9]: comicdiv.img.get('src')
+Out[9]: u'http://www.paranatural.net/comics/2011-04-30-chapter 1.png'   
+In [10]: comicdiv.img.get('title')
+Out[10]: u'Twelve-year-old Max moves into the picturesque town of Mayview and is plagued by strange visions and stranger people on his first day of school.'
 
 {% endhighlight %}
 Lets wrap this in a function so that we don't have to deal with the soupy details while setting up the whole contraption.
