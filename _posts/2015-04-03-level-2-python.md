@@ -15,6 +15,7 @@ The conditional expression returns one value if a condition is true or else it r
 
 
 some arbitrary examples.    
+{% highlight python %} 
 
     In [10]: 5 if 10%2 else 10
     Out[10]: 10
@@ -29,7 +30,8 @@ some arbitrary examples.
 
     In [14]: 'vowel' if 'e' in vowels else 'consonant'
     Out[14]: 'vowel'
-
+    
+{% endhighlight %}
 
 
 ### List Comprehensions    
