@@ -233,7 +233,7 @@ In [11]: for square in gen:
 *Slicing syntax* is a super convenient way of referring to sections in a list or a string. This is one of the reasons why string work is such a breeze in python.   
 Say there is a string 'DeadParrot'   
 
-Element   | Forward Index | Backward Index
+_Element_   | _Forward Index_ | _Backward Index_
 ------------- | ------------- | ---------------
 D  | 0 | -1
 E  | 1 | -2
