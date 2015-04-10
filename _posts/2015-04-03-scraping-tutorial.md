@@ -4,6 +4,20 @@ title: "Scraping Tutorial"
 description: "Hands on scraping tutorial using python, beautifulsoup and requests with some pillow magic thrown in"
 category: lessons
 tags: ["python","beautifulsoup","pillow","pil","requests","scraping"]
+style: |
+  table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:2px solid #ff0000;
+}
+
+th{
+    border:2px solid #000000;
+}
+
+td{
+    border:1px solid #000000;
+}
 ---
 {% include JB/setup %}
 
@@ -233,7 +247,7 @@ In [11]: for square in gen:
 *Slicing syntax* is a super convenient way of referring to sections in a list or a string. This is one of the reasons why string work is such a breeze in python.   
 Say there is a string 'DeadParrot'   
 
-_Element_   | _Forward Index_ | _Backward Index_
+Element   | Forward Index | Backward Index
 ------------- | ------------- | ---------------
 D  | 0 | -1
 E  | 1 | -2
