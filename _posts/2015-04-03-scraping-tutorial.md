@@ -232,49 +232,22 @@ In [11]: for square in gen:
 
 *Slicing syntax* is a super convenient way of referring to sections in a list or a string. This is one of the reasons why string work is such a breeze in python.   
 Say there is a string 'DeadParrot'   
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;border:none;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:0px;overflow:hidden;word-break:normal;}
-</style>
-<table class="tg">
-<tr>
-<th class="tg-031e">D</th>
-<th class="tg-031e">e</th>
-<th class="tg-031e">a</th>
-<th class="tg-031e">d</th>
-<th class="tg-031e">P</th>
-<th class="tg-031e">a</th>
-<th class="tg-031e">r</th>
-<th class="tg-031e">r</th>
-<th class="tg-031e">o</th>
-<th class="tg-031e">t</th>
-</tr>
-<tr>
-<td class="tg-031e">0</td>
-<td class="tg-031e">1</td>
-<td class="tg-031e">2</td>
-<td class="tg-031e">3</td>
-<td class="tg-031e">4</td>
-<td class="tg-031e">5</td>
-<td class="tg-031e">6</td>
-<td class="tg-031e">7</td>
-<td class="tg-031e">8</td>
-<td class="tg-031e">9</td>
-</tr>
-<tr>
-<td class="tg-031e">-10</td>
-<td class="tg-031e">-9</td>
-<td class="tg-031e">-8</td>
-<td class="tg-031e">-7</td>
-<td class="tg-031e">-6</td>
-<td class="tg-031e">-5</td>
-<td class="tg-031e">-4</td>
-<td class="tg-031e">-3</td>
-<td class="tg-031e">-2</td>
-<td class="tg-031e">-1</td>
-</tr>
-</table>
+
+element  | forward index | backward index
+------------- | ------------- | ---------------
+D  | 0 | -1
+E  | 1 | -2
+A  | 2 | -3
+D  | 3 | -4
+P  | 4 | -5
+A  | 5 | -6
+R  | 6 | -7
+R  | 7 | -8
+O  | 8 | -9
+T  | 9 | -10
+
+
+
 {% highlight python %}
 
 In [1]: s='DeadParrot'
