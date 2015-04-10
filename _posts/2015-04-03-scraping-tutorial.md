@@ -4,20 +4,6 @@ title: "Scraping Tutorial"
 description: "Hands on scraping tutorial using python, beautifulsoup and requests with some pillow magic thrown in"
 category: lessons
 tags: ["python","beautifulsoup","pillow","pil","requests","scraping"]
-style: |
-  table{
-    border-collapse: collapse;
-    border-spacing: 0;
-    border:2px solid #ff0000;
-}
-
-th{
-    border:2px solid #000000;
-}
-
-td{
-    border:1px solid #000000;
-}
 ---
 {% include JB/setup %}
 
