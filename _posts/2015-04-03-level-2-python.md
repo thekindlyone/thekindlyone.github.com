@@ -82,7 +82,7 @@ Out[9]:
  (10, 100)]
 {% endhighlight %}
 ###Anatomy of list comprehensions, and optional bling
-![listcomp.png](http://i.imgur.com/DhooQ7E.png)
+![listcomp.svg](/listcomp.svg)
 
 ### More comprehensions - dicts, sets and generator expressions.    
 **Dictionary Comprehension** : ```{<key>:<value> for <item> in <iterable> }```     
