@@ -1,30 +1,28 @@
 <svg width="800" height="150" xmlns="http://www.w3.org/2000/svg">
  <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+
  <g>
   <title>background</title>
-  <rect fill="#282828" id="canvas_background" height="152" width="802" y="-1" x="-1"/>
-  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
-   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  <rect x="-1" y="-1" width="802" height="152" id="canvas_background" fill="#282828"/>
+  <g id="canvasGrid" display="none">
+   <rect id="svg_3" width="100%" height="100%" x="0" y="0" stroke-width="0" fill="url(#gridpattern)"/>
   </g>
  </g>
  <g>
   <title>Layer 1</title>
-  <text stroke="#000" transform="matrix(28.578454971313477,0,0,1,-1723.6534357070923,0) " xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_1" y="134" x="62.5" stroke-width="0" fill="#000000"/>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_2" y="59" x="3.11719" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">[ &lt;items of the list, usually a function of i&gt; for i in &lt;iterable&gt;  if &lt;condition&gt; ]</text>
-  <ellipse ry="4.5" id="svg_4" cy="62.5" cx="295.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7"/>
-  <ellipse id="svg_7" cy="84" cx="110.5" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7"/>
-  <rect stroke="#000" opacity="0.39" id="svg_8" height="44" width="433" y="28" x="12.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#bbbba7"/>
-  <rect id="svg_9" height="1" width="0" y="114" x="686.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7"/>
-  <rect stroke="#000" opacity="0.39" id="svg_11" height="40" width="228.99998" y="72" x="13" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#bbbba7"/>
-  <text stroke="#000" transform="matrix(1,0,0,1.1666666269302368,0,-12.333330392837524) " xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_13" y="80" x="19" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#bbbba7">Can be any expression, tuple,  another</text>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_15" y="95" x="19" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">list comprehension or a conditional expression</text>
-  <rect stroke="#000" opacity="0.39" id="svg_16" height="90" width="112" y="28" x="518.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#bbbba7"/>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_17" y="80" x="524.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">Any iterable including</text>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_18" y="95" x="525" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">another  list</text>
-  <text stroke="#000" transform="matrix(0.9468107223510742,0,0,1,27.924370765686035,0) " xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_19" y="110" x="525" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#bbbba7">comprehension</text>
-  <rect opacity="0.39" id="svg_20" height="98" width="143" y="28" x="640.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7"/>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_21" y="80" x="646.5" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">Optional, if specified filters</text>
-  <text xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_23" y="95" x="647" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">out items that do not satisfy</text>
-  <text style="cursor: move;" xml:space="preserve" text-anchor="left" font-family="Helvetica, Arial, sans-serif" font-size="11" id="svg_24" y="110" x="647" fill-opacity="null" stroke-opacity="null" stroke-width="0" stroke="#000" fill="#bbbba7">condition.</text>
+  <text fill="#000000" stroke-width="0" x="62.5" y="134" id="svg_1" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve" transform="matrix(28.578454971313477,0,0,1,-1723.6534357070923,0) " stroke="#000"/>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" x="3.11719" y="59" id="svg_2" font-size="24" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">[ &lt;items of the list, usually a function of i&gt; for i in &lt;iterable&gt;  if &lt;condition&gt; ]</text>
+  <rect fill="#bbbba7" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="12.5" y="28" width="433" height="44" id="svg_8" opacity="0.39" stroke="#000"/>
+  <rect stroke="#000" fill="#bbbba7" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="13" y="72" width="238.99998" height="40" id="svg_11" opacity="0.39"/>
+  <text fill="#bbbba7" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="19" y="80" id="svg_13" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve" transform="matrix(1,0,0,1.1666666269302368,0,-12.333330392837524) " stroke="#000">Can be any expression, tuple,  another</text>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="19" y="95" id="svg_15" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">list comprehension or a conditional expression</text>
+  <rect fill="#bbbba7" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="518.5" y="28" width="112" height="90" id="svg_16" opacity="0.39" stroke="#000"/>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="524.5" y="80" id="svg_17" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">Any iterable including</text>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="525" y="95" id="svg_18" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">another  list</text>
+  <text fill="#bbbba7" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="525" y="110" id="svg_19" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve" stroke="#000">comprehension</text>
+  <rect fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="640.5" y="28" width="143" height="98" id="svg_20" opacity="0.39"/>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="646.5" y="80" id="svg_21" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">Optional, if specified filters</text>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="647" y="95" id="svg_23" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">out items that do not satisfy</text>
+  <text fill="#bbbba7" stroke="#000" stroke-width="0" stroke-opacity="null" fill-opacity="null" x="647" y="110" id="svg_24" font-size="11" font-family="Helvetica, Arial, sans-serif" text-anchor="left" xml:space="preserve">condition.</text>
  </g>
 </svg>
