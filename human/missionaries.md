@@ -43,7 +43,7 @@ Points of particular interest here are:
 
 Are these not some of the exact things that atheists criticise moderate/progressive muslims of not championing? And when someone wants to do exactly that, the response is ill concealed condescension. This hypocrisy does not bode well for the movement.            
 **If the progressive muslim does not find an ally in the atheist, what hope is there for the community?**              
-Lastly,if we believe that there is no higher power looking out for us, that there is no order to the universe, that there is no predefined purpose to human life, **then it follows that all we have is each other for support and encouragement**. It would do our species well to act accordingly.
+Lastly, if we believe that there is no higher power looking out for us, that there is no order to the universe, that there is no predefined purpose to human life, **then it follows that all we have is each other for support and encouragement**. It would do our species well to act accordingly.
 
 
 # If interested, please [donate to her Milaap campaign](https://milaap.org/campaigns/shirin-dalvi-urdu-journalist)
