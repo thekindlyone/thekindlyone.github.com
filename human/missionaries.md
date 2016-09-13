@@ -1,7 +1,9 @@
 ---
 layout: humanpage
 title: "Missionaries of Rationality"
-description: ""
+description: "On the attitude of some atheists towards theists in need of help"
+category: ramblings
+tags: ["shirin","dalvi","charlie","hebdo","milaap","atheism"]
 ---
 {% include JB/setup %}
 
