@@ -4,9 +4,12 @@ title: "Fundraiser Analysis"
 description: "Some plotly magic on a dataset"
 category: Demo
 tags: ["python","beautifulsoup","plotly","data","gmail","shirin","dalvi"]
+thumbnail: "http://thekindlyone.github.io/assets/Exploration_files/Exploration_15_0.png"
 ---
 {% include JB/setup %}
-# Shirin Dalvi Fundraiser Analysis
+
+
+# Or how I refused to send 100 manual emails and made some charts instead
 
 Sometime back I started a [fundraiser](https://milaap.org/campaigns/shirin-dalvi-urdu-journalist) for a journalist in trouble. 
 
@@ -234,11 +237,14 @@ fig=Figure(
                 shapes=shapes,
             )
        )
-py.image.ishow(fig)
+py.iplot(fig)
 ```
 
 
-![png](/assets/Exploration_files/Exploration_15_0.png)
+
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~thekindlyone/98.embed" height="525px" width="100%"></iframe>
+
 
 
 Clearly this thing was dead without Tarek Fatah's endorsement. News publications didn't help at all.               
@@ -252,18 +258,34 @@ The fundraising website took both USD and INR.
 
 ```python
 total = sum(d['amount'] for d in data)
+total_donors = len(data)
 total_donated_in_usd = sum(d['amount'] for d in data if d['usd'])
+usd_donor_count = sum(1 for d in data if d['usd'])
+
 fig = {
-    'data': [{'labels': ['INR','USD'],
+    'data': [{'labels': ['Amount donated in INR','Amount donated in USD'],
               'values': [total-total_donated_in_usd,total_donated_in_usd],
-              'type': 'pie'}],
+              'type': 'pie',
+               'name': '1',
+               'domain': {'x': [0, .49]}
+             },
+             {'labels': ['Number of donations in INR','Number of donations in USD'],
+              'values': [total_donors-usd_donor_count,usd_donor_count],
+              'type': 'pie',
+              'name': '2',
+              'domain': {'x': [.52, 1]}
+             },
+            ],
     'layout': {'title': 'Distribution of Donations by Currency'}
      }
-py.image.ishow(fig)
+py.iplot(fig)
 ```
 
 
-![png](/assets/Exploration_files/Exploration_17_0.png)
+
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~thekindlyone/96.embed" height="525px" width="100%"></iframe>
+
 
 
 ## Religious Distribution of Donors
@@ -319,11 +341,14 @@ fig = {
     'layout': {'title': 'Distribution of Donors by Religion'}
      }
 
-py.image.ishow(fig)
+py.iplot(fig)
 ```
 
 
-![png](/assets/Exploration_files/Exploration_21_0.png)
+
+
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~thekindlyone/100.embed" height="525px" width="100%"></iframe>
+
 
 
 
